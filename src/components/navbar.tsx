@@ -5,6 +5,7 @@ import { auth } from '../config/firebase'
 import { useAuthState } from "react-firebase-hooks/auth"
 //allows you to sign out
 import { signOut } from 'firebase/auth'
+import '../App.css';
 export const Navbar = () => {
     const [user] = useAuthState(auth);
     //allows user to logout
@@ -13,20 +14,27 @@ export const Navbar = () => {
     }
     return (
         <div>
-            <Link to="/" > Home </Link>
-            <Link to="/login" > login </Link>
-            <div>
+            <div className='navbar'>
+                <div className="links">
+                <Link to="/" > Home </Link>
+                {/* if user is not logged in, show login link */}
+                {!user ? 
+                <Link to="/login" > Login </Link>
+                :
+                // if logged in, remove login link show create post
+                <Link to="/createPost"> Create Post </Link>
+                }
+                </div>
                 {/* dont display this block if user is not logged in */}
                 { user && (
-                    <div>
-                    <p> {user?.displayName} </p>
-                        <button onClick={signUserOut}> Log-out </button>
-                        <img src={user?.photoURL || "ello"} height="50" width="50" alt='hello'/>
-                            
-                    </div>
+                <div className="user">
+                    <img src={user?.photoURL || "ello"} height="50" width="50" alt='hello'/>
+                    {/* displays only the first name of the user */}
+                    <p> {user?.displayName?.split(' ')[0]} </p>
+                    <button onClick={signUserOut}> Log-out </button>
+                </div>
                 )}   
             </div>
-
         </div>
     )
 }
