@@ -13,11 +13,13 @@ export const Login = () => {
     }
 
     return (
-        <div>
-            <h2> This is the log-in page </h2>
-            <p> Sign in with Google </p>
-            {/* import files from config file to enable google auth */}
-            <button onClick={signWithGoogle}> Google </button>
+        <div className="login-page-container">
+            <div className="login-page">
+                <h2> This is the log-in page </h2>
+                <p> Sign in with Google </p>
+                {/* import files from config file to enable google auth */}
+                <button onClick={signWithGoogle} className="sign-in"> Google </button>
+            </div>
         </div>
     )
 }

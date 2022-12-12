@@ -31,7 +31,7 @@ export const Navbar = () => {
                     <img src={user?.photoURL || "ello"} height="50" width="50" alt='hello'/>
                     {/* displays only the first name of the user */}
                     <p> {user?.displayName?.split(' ')[0]} </p>
-                    <button onClick={signUserOut}> Log-out </button>
+                    <button onClick={signUserOut} className="logout"> Log-out </button>
                 </div>
                 )}   
             </div>

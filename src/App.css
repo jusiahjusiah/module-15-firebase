@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: #9dd6d4;
+  padding-bottom: 20px;
 }
 
 .App-logo {
@@ -21,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #9dd6d4;
 }
 
 .App-link {
@@ -37,19 +40,27 @@
   }
 }
 
+/* global stylings */
+
+h2 {
+  color: white;
+}
 /* navbar simple css */
 
 .navbar {
-  background-color: rgb(236, 149, 175);
-  padding: 10px;
+  background-color: #40B3A2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  margin-bottom: 30px;
 }
 
 .navbar :any-link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .links :link{
@@ -58,7 +69,7 @@
 }
 
 .links :hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #DF6C4F;
 }
 
 .user {
@@ -71,16 +82,159 @@
   border-radius: 50%;
   margin-right: 10px;
   margin-left: 10px;
+  height: 30px;
+  width: 30px;
 }
 
 .user p {
   font-size: 15px;
   margin-right: 20px;
   font-weight: 700;
+  color: white;
 }
 
 .user button {
   border: none;
-  padding: 5px;
-  color:rgb(2, 1, 34);
+  padding: 5px 10px;
+  color: white;
+  margin-right: 20px;
+  background-color: #40B3A2;
+  border: 2px solid #DF6C4F;
+  display: flex;
+
+}
+
+.logout:hover {
+  background-color: #DF6C4F;
+  color: white;
+
+}
+
+/* login page */
+.login-page-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+}
+
+.login-page {
+  background-color:#40B3A2;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 40px 50px 50px;
+
+}
+
+.login-page button {
+  text-align: center;
+  padding: 5px 10px;
+  color: whitesmoke;
+  background-color: #40B3A2;
+  border: 2px solid #123c69;
+
+}
+
+.sign-in:hover {
+  background-color: #9DD6D4;
+  color: #123c69;
+  cursor: pointer;
+}
+
+.login-page p {
+  color: white;
+}
+
+/* post container */
+.post-container {
+  background-color:#40B3A2;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 40px 50px 50px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-title {
+  height: 25px;
+  border: none;
+  text-indent: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title:focus{
+  outline: 2px solid #DF6C4F;
+}
+
+.form-textarea {
+  padding: 5px 5px 10px 10px;
+  border: none;
+  text-indent: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-textarea:focus{
+  outline: 2px solid #DF6C4F;
+}
+
+.form-error-message {
+  font-size: 12px;
+  color: rgb(107, 6, 6);
+}
+
+.form-submit {
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #40B3A2;
+  color: white;
+  border: 2px solid #DF6C4F;
+}
+
+.form-submit:hover {
+  background-color: #DF6C4F;
+  color: white;
+}
+
+/* home container  */
+
+.container {
+  background-color:#40B3A2;
+  display: inline-block;
+  min-width: 500px;
+  margin-top: 20px;
+  padding: 50px;
+  
+}
+
+.home-container {
+  color:#0c3b6d;
+  background-color: #9DD6D4;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.home-title {
+  font-weight: 700;
+}
+
+.home-description {
+  text-align: start;
+
+}
+
+.home-username {
+
+}
+
+.home-photo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
