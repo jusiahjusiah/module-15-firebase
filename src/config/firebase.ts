@@ -8,12 +8,12 @@ import {getAuth, GoogleAuthProvider } from "firebase/auth"
 //importing firestore to access database
 import { getFirestore } from 'firebase/firestore'
 const firebaseConfig = {
-  apiKey: "AIzaSyDLgtyBtYz2cE_ZQKBKBE2mx3aOdASDX50",
-  authDomain: "react-firebase-jusiah.firebaseapp.com",
-  projectId: "react-firebase-jusiah",
-  storageBucket: "react-firebase-jusiah.appspot.com",
-  messagingSenderId: "1042205005511",
-  appId: "1:1042205005511:web:40c813d0aedb036dc250e2"
+  apiKey: "AIzaSyC7FXU11bs5afUr-MrOtHjwzN0B84ljX08",
+  authDomain: "react-jusiah-mommy.firebaseapp.com",
+  projectId: "react-jusiah-mommy",
+  storageBucket: "react-jusiah-mommy.appspot.com",
+  messagingSenderId: "487212106446",
+  appId: "1:487212106446:web:da1bc4dd4756952892469f"
 };
 
 // Initialize Firebase

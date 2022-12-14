@@ -1,6 +1,7 @@
 import { getDocs, collection } from 'firebase/firestore'
 import { useEffect, useState } from 'react';
 import { db } from '../../config/firebase';
+import { CreateForm } from '../create-post/createForm';
 import { Posts } from './posts';
 //define what your Post looks like from Firestore
 export interface Post {
@@ -21,21 +22,25 @@ export const Main = () => {
         const data = await getDocs(postsRef)
         //cast data as Data type Post
         //map our data from the firestore database
-        setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id})) as Post[])
+        setPostList(data.docs.map((doc) => 
+        ({ ...doc.data(), id: doc.id})) as Post[])
     }
-
-    //use useEffect hook to fetch your document's post array
-
+    // use useEffect hook to fetch your document's post array
     useEffect(() => {
         getPosts()
     }, [])
     
     return (
         <div className="container">
+            <div className="home-container">
+                <CreateForm/>
+            </div>
+            <div>
             {/* loops through our postList */}
             {postList?.map(( post ) =>
                 <Posts post={post}/>
                 )}
+            </div>
         </div>
     )
 }
