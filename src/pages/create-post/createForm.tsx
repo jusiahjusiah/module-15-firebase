@@ -8,7 +8,10 @@ import { addDoc, collection} from "firebase/firestore"
 import { auth, db } from '../../config/firebase'
 //import auth to access current user
 import { useAuthState } from "react-firebase-hooks/auth"
+import { useNavigate } from 'react-router-dom'
 export const CreateForm = () => {
+
+    const navigate = useNavigate()
 
     //define an interface so that you could assign data types to your schema
     interface CreateFormData {
@@ -38,7 +41,6 @@ export const CreateForm = () => {
     //js promise is completed in the future after
     //the function returns a value
     //it's either a success or an error
-
     const onCreatePost = async (data : CreateFormData) => {
         await addDoc(postsRef, {
             // title: data.title,
@@ -48,11 +50,13 @@ export const CreateForm = () => {
             username: user?.displayName,
             userId: user?.uid
         })
+        navigate("/");
     }
 
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit(onCreatePost)}>
+            <h2> Create your post here! </h2>
                 <input placeholder='Title...' {...register("title")} className="form-title"></input>
                 <p className="form-error-message"> {errors.title?.message} </p>
                 <textarea placeholder='Description...' {...register("description")} className="form-textarea"/>

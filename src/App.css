@@ -2,7 +2,6 @@
   text-align: center;
   min-height: 100vh;
   background-color: #9dd6d4;
-  padding-bottom: 20px;
 }
 
 .App-logo {
@@ -204,7 +203,7 @@ h2 {
 .container {
   background-color:#40B3A2;
   display: inline-block;
-  min-width: 500px;
+  max-width: 400px;
   margin-top: 20px;
   padding: 50px;
   
@@ -230,7 +229,7 @@ h2 {
 }
 
 .home-username {
-
+  font-weight: 700;
 }
 
 .home-photo {
