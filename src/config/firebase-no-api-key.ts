@@ -8,7 +8,12 @@ import {getAuth, GoogleAuthProvider } from "firebase/auth"
 //importing firestore to access database
 import { getFirestore } from 'firebase/firestore'
 const firebaseConfig = {
-
+   apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
